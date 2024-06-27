@@ -8,7 +8,7 @@ function CoffeeShopCard({name,coverImage,distance,ratings,reviews}) {
       <div className='absolute bg-gray border-2 border-white  rounded-full align-middle p-2 pb-0 -top-1 -right-1 hover:border-deepLagoanBlue'>
         <i className="fi fi-br-heart text-deepLagoanBlue text-xl"></i>
         </div>
-      <div><img className='rounded-3xl' loading="lazy" src={coverImage} alt={name} /></div>
+      <div><img className='rounded-3xl h-96 w-full' loading="lazy" src={coverImage} alt={name} /></div>
       <div className='font-semibold text-deepLagoanBlue pt-1 pl-2'>{name}</div>
       <div className='flex flex-row flex-wrap pl-2'>
         <div className='flex flex-row'>
