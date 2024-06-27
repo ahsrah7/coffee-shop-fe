@@ -23,3 +23,30 @@ export const getAllProductsByCoffeeShop = async (coffeeShopId) => {
     }
     return response.json();
 };
+
+export const checkout = async (data) => {
+    const response = await fetch(`${BASE_URL}orders/checkout`, {
+        method: 'POST', 
+        headers: {
+          'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify(data) 
+      });
+    if (!response.ok) {
+        throw new Error('Failed to order checkout');
+    }
+    return response.json();
+};
+
+export const paymentVerify = async (data)=>{
+    const response = await fetch(`${BASE_URL}orders/payment-verify`, {
+        method: 'POST', 
+        headers: {
+          'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify(data) 
+      });
+    if (!response.ok) {
+        throw new Error('Failed to verify order');
+    }
+}

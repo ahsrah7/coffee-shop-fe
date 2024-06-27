@@ -45,8 +45,8 @@ function CoffeeShopImageSlider({coffeeShopId}) {
      }}
     >
    {coffeeShop && coffeeShop?.sliderImages.map((URL, index) => (
-     <div className="slide">
-       <img className='h-[50vh] object-cover'  src={URL} key={index} />
+     <div className="slide" key={index}>
+       <img className='h-[50vh] object-cover'  src={URL}  />
      </div>
    ))}
  </Carousel>
